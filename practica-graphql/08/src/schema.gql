@@ -1,0 +1,46 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ResultadoExa {
+  id: ID!
+  resultadoID: String!
+  laboratorioID: Int!
+  pacienteID: String!
+  fechadeexamen: String!
+  resultado: String!
+  tipo: Int!
+  estado: Boolean
+}
+
+type Query {
+  resultadosExa: [ResultadoExa!]!
+  resultadoExa(id: ID!): ResultadoExa!
+}
+
+type Mutation {
+  createResultadoExa(createResultadoExaInput: CreateResultadoExaInput!): ResultadoExa!
+  updateResultadoExa(updateResultadoExaInput: UpdateResultadoExaInput!): ResultadoExa!
+  removeResultadoExa(id: ID!): ResultadoExa!
+}
+
+input CreateResultadoExaInput {
+  resultadoID: String!
+  laboratorioID: String!
+  pacienteID: String!
+  fechadeexamen: String!
+  resultado: String!
+  tipo: Int!
+  estado: Boolean!
+}
+
+input UpdateResultadoExaInput {
+  resultadoID: String
+  laboratorioID: String
+  pacienteID: String
+  fechadeexamen: String
+  resultado: String
+  tipo: Int
+  estado: Boolean
+  id: ID!
+}
